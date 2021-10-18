@@ -3,20 +3,37 @@ import { Link } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import useAuth from '../Hooks/UseAuth';
+import {useState} from 'react'
+import useFirebase from '../Hooks/UseFirebase';
 
 const Register = () => {
+    const {setEmail,error,password, setError, setPassword, signInUsingEmailAndPassword} = useFirebase()
     const {signInUsingGoogle} = useAuth();
+    const handleSignUp = e => {
+        e.preventDefault();
+        if(password.length < 6){
+            setError('Password Must be 6 letter')
+            return;
+        }
+        signInUsingEmailAndPassword();
+    }
+    const handleEmailChange = e => {
+        setEmail(e.target.value)
+    }
+    const handlePasswordChange = e => {
+        setPassword(e.target.value)
+    }
     return (
         <div>
             <Header></Header>
             <div className='my-5 text-center w-50 mx-auto signIn-container'>
             <h1 className="signIn-text pb-5">Create Account</h1>
-            <form  onSubmit=''>
-                <input className='form-control input-item' type="name" name="" placeholder='Enter Your Name' id="" />
+            <form  onSubmit={handleSignUp}>
+                <input className='form-control input-item' type="name" name="" placeholder='Enter Your Name' id="" required />
                 <br />
-                <input className='form-control input-item' type="email" name="" placeholder='Enter Your Email' id="" />
+                <input className='form-control input-item' onBlur={handleEmailChange} type="email" name="" placeholder='Enter Your Email' id="" required />
                 <br />
-                <input className='form-control input-item' type="password" name="" placeholder='Enter Your Password' id="" />
+                <input onBlur={handlePasswordChange} className='form-control input-item' type="password" name="" placeholder='Enter Your Password' id="" required/><sapn className='text-danger'>{error}</sapn>
                 <br />
                 <input className='form-control input-item' type="password" name="" placeholder='Re-Enter Your Password' id="" />
                 <br />
