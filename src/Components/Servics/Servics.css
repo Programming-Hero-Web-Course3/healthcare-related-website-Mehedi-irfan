@@ -1,6 +1,19 @@
 .service-title{
     font-weight: 600;
     letter-spacing: 1px;
-    color: rgb(7, 7, 66);
     padding-bottom: 50px;
+    color: white;
+}
+.service-container{
+    background-color: rgb(7, 7, 66);
+    color: white;
+    padding: 80px 0px;
+    border-top-left-radius: 40% 10%;
+    border-top-right-radius: 40% 10%;
+}
+@media only screen and (max-width:668px) {
+    .service-container{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
 }
