@@ -5,7 +5,7 @@ import './Servics.css';
 const Servics = () => {
     const [servics, setServices] = useState([]);
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAA6K4WFGAPYKVLG6QDBNWBN4')
+        fetch('https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAEWKA4AKCNIJVZF6ITBNW2DY')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])

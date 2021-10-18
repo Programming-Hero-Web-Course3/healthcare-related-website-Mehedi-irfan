@@ -2,9 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../logo.png';
 import Banner from '../Banner/Banner';
+import useAuth from '../Hooks/UseAuth';
+import useFirebase from '../Hooks/UseFirebase';
 import './Header.css'
 
 const Header = () => {
+
+    const {user, logOut} = useFirebase();
+
     const activeStyle = {
         color : '#7d4c9e',
         borderBottom : '2px solid #7d4c9e'
@@ -35,13 +40,16 @@ const Header = () => {
                     <NavLink activeStyle={activeStyle} className="nav-link fs-5 mx-2 fw-semibold navItem" to="/blog">Blog</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link fs-5 mx-2 fw-semibold" id='navItem' to="/signIn">Sign In</NavLink>
+                    {user.email ?<NavLink onClick={logOut} className="nav-link fs-5 mx-2 fw-semibold" id='navItem' to='/'>Sign Out</NavLink>
+                        :<NavLink className="nav-link fs-5 mx-2 fw-semibold" id='navItem' to="/signIn">Sign In</NavLink>}
+                        
                     </li>
+                    <li className='nav-item'><h5 className='mt-3 navItem'>{user.displayName}</h5></li>
                 </ul>
               </div>
             </div>
         </nav>
-            
+            <hr className='py-0 my-0' />
         </div>
     );
 };

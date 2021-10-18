@@ -1,16 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Header from './Components/Header/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Services from './Components/Services/Services';
 import Blog from './Components/Blog/Blog';
 import SignIn from './Components/SignIn/SignIn';
+import Register from './Components/Register/Register';
+import AuthProvider from './Context/AuthProvider';
 
 function App() {
   return (
     <div>
+     <AuthProvider>
      <Router>
       <Switch>
         <Route exact path='/'>
@@ -31,8 +32,12 @@ function App() {
         <Route path='/signIn'>
           <SignIn></SignIn>
         </Route>
+        <Route path='/register'>
+          <Register></Register>
+        </Route>
       </Switch>
      </Router>
+     </AuthProvider>
     </div>
   );
 }
