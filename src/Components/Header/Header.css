@@ -1,0 +1,24 @@
+.bg-color{
+    background-color: white;
+}
+.critical{
+    color: #249ed9;
+    letter-spacing: 2px;
+}
+.navItem{
+    color: #249ed9 !important;
+    
+}
+#navItem{
+    background-color: transparent;
+    border: 2px solid #249ed9;
+    padding: 3px 20px;
+    color: #249ed9;
+    margin-top: 7px;
+    border-radius: 5px;
+    transition: 0.6s ease-in;
+}
+#navItem:hover{
+    background-color: #249ed9;
+    color: white;
+}
