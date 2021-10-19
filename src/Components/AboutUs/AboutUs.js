@@ -6,9 +6,11 @@ import './AboutUs.css';
 const AboutUs = () => {
     return (
         <div className='row container mx-auto aboutUs d-flex justify-content-center align-items-center'>
+            {/* frist col\ */}
            <div className="col-lg-6">
             <img src={aboutImg} className='aboutus-img w-100' alt="" />
            </div>
+           {/* second col\ */}
            <div className="col-lg-6">
                <h4 className='about-text'>About Us</h4>
                <h1 className='py-3 about-title'>We Are Caring For Your Eye Health Hospital</h1>

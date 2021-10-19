@@ -8,8 +8,9 @@ import useFirebase from '../Hooks/UseFirebase';
 
 const Register = () => {
     const {setEmail,error,password, setError, setPassword, signInUsingEmailAndPassword, singUpUsingEmailAndPassword, isLogin} = useFirebase()
+    // useAuth call\
     const {signInUsingGoogle} = useAuth();
-
+    // sign Up button\
     const handleSignUp = e => {
         e.preventDefault();
         if(password.length < 6){
@@ -23,9 +24,11 @@ const Register = () => {
             signInUsingEmailAndPassword();
         }
     }
+    // email btn\
     const handleEmailChange = e => {
         setEmail(e.target.value)
     }
+    // password btn\
     const handlePasswordChange = e => {
         setPassword(e.target.value)
     }
@@ -49,6 +52,7 @@ const Register = () => {
                 <h5>Alreay Have an Account? <Link to='/signIn'>Sign In</Link> </h5>
             </div>
             <div><h3 className='text-warning py-3'>-------------- or ---------------</h3></div>
+            {/* google sign btn\ */}
             <button onClick={signInUsingGoogle} className='btn-submit form-control mt-3'><i class="fab fa-google-plus-g"></i> <span>Google Sign In</span></button>
             </div>
             <Footer></Footer>

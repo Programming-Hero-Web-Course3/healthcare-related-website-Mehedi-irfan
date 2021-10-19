@@ -8,7 +8,9 @@ const ChooseUs = () => {
           <h4 className='choose-text'>Why Choose Us</h4>
           <h1>Providing Care For The Sickest</h1>
           </div>
+          {/* choose us\ */}
           <div className="row w-100 container mx-auto pb-5 gy-3">
+              {/* frist col\ */}
               <div className="col-lg-4">
                   <div className='choose-card'>
                       <span><i class="fas fa-user-md card-icon"></i></span>
@@ -17,6 +19,7 @@ const ChooseUs = () => {
                       <button className='btn-view'>View Details <span><i class="fas fa-arrow-right ms-1 fs-6 mt-2"></i></span></button>
                   </div>
               </div>
+              {/* second col\ */}
               <div className="col-lg-4">
               <div className='choose-card'>
                       <span><i class="fas fa-eye card-icon"></i></span>
@@ -25,6 +28,7 @@ const ChooseUs = () => {
                       <button className='btn-view'>View Details <span><i class="fas fa-arrow-right ms-1 fs-6 mt-2"></i></span></button>
                   </div>
               </div>
+              {/* third col\ */}
               <div className="col-lg-4">
               <div className='choose-card'>
                       <span><i class="fab fa-skyatlas card-icon"></i></span>

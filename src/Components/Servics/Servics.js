@@ -14,6 +14,7 @@ const Servics = () => {
             <div className='container mx-auto text-center '>
             <h4 className='about-text '>Services</h4>
             <h1 className='service-title'>Critical Eye Care Services</h1>
+            {/* home page service\ */}
             <div className="row gy-4 ">
                 {
                     servics && servics.length > 0 &&

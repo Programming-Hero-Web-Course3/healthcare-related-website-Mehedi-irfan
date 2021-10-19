@@ -7,6 +7,7 @@ import './Services.css';
 
 const Services = () => {
     const [services, setServices] = useState([])
+    // data load\
     useEffect( () => {
         fetch('FullService.json')
         .then(res => res.json())
@@ -18,6 +19,7 @@ const Services = () => {
             <Banner></Banner>
             <div className='py-5 container mx-auto text-center my-5'>
                 <h2 className='serviceContainer-title'>Our <span>Critical Eye Care Hospital</span> Services</h2>
+                {/* service page\ */}
                 <div className="row gy-4 py-5">
                     {
                         services.map(service => <Service

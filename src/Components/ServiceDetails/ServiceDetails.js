@@ -15,6 +15,7 @@ const ServiceDetails = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => {
+            // find single id on fake data\
             const signleData = data.find((item) => item.id == servicId)
             setServicsDetails(signleData)
         })

@@ -13,6 +13,7 @@ const Doctor = (props) => {
                 <h6>{specailist}</h6>
                 </div>
                 <hr />
+                {/* socail media icon\ */}
                 <div className='d-flex justify-content-around'>
                     <span><i class="fab fa-facebook-f doctor-icon"></i></span>
                     <span><i class="fab fa-twitter doctor-icon"></i></span>

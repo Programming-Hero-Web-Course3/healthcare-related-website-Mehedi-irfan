@@ -7,7 +7,9 @@ import './About.css';
 import Doctor from '../Doctor/Doctor';
 
 const About = () => {
+    // destructering
     const [doctors, setDoctor] = useState([])
+    // data load\
     useEffect( () => {
         fetch('Doctor.json')
         .then(res => res.json())
@@ -55,6 +57,7 @@ const About = () => {
 
            <div className='shadow-lg rounded-3 py-5 my-5 container mx-auto'>
                 <h2 className='text-center doctorSection-title py-5'>Our <span>Critical Eye Care Hospital</span> Doctors</h2>
+                {/* doctor team page\ */}
                 <div className="mx-auto row g-4 py-5">
                     {
                         doctors.map(doctor => <Doctor
@@ -64,6 +67,7 @@ const About = () => {
                     }
                 </div>
            </div>
+           {/* footer section\ */}
            <Footer></Footer>
         </div>
     );

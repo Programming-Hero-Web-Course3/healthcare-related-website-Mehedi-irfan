@@ -8,6 +8,8 @@ import SignIn from './Components/SignIn/SignIn';
 import Register from './Components/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -24,12 +26,12 @@ function App() {
         <Route path='/about'>
           <About></About>
         </Route>
-        <Route path='/service'>
+        <PrivateRoute path='/service'>
           <Services></Services>
-        </Route>
-        <Route path='/serviceDetails/:servicId'>
+        </PrivateRoute>
+        <PrivateRoute path='/serviceDetails/:servicId'>
           <ServiceDetails></ServiceDetails>
-        </Route>
+        </PrivateRoute>
         <Route path='/blog'>
           <Blog></Blog>
         </Route>
@@ -38,6 +40,9 @@ function App() {
         </Route>
         <Route path='/register'>
           <Register></Register>
+        </Route>
+        <Route path='*'>
+          <NotFound></NotFound>
         </Route>
       </Switch>
      </Router>
