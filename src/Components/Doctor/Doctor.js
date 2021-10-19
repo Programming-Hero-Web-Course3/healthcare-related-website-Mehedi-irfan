@@ -5,7 +5,7 @@ const Doctor = (props) => {
     console.log(props.doctor)
     return (
     
-            <div className="col-lg-4 col-sm-12">
+            <div className="col-lg-4 col-sm-12 border p-4">
                 <img src={img} className='w-100' alt="" />
                 <h2>{name}</h2>
                 <h5>{specialList}</h5>
