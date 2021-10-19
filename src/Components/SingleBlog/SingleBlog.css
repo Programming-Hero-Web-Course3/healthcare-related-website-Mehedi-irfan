@@ -1,0 +1,24 @@
+.blog-container{
+    box-shadow: 5px 5px 20px lightgray;
+    padding: 10px 10px;
+    border: 2px solid transparent;
+    transition: 0.6s ease-in;
+}
+.blog-container:hover{
+    box-shadow: none;
+    border: 2px solid #249ed9;
+}
+.blog-info h4{
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #249ed9;
+}
+.blog-info h6{
+    letter-spacing: 2px;
+    color: gray;
+}
+.blog-info p{
+    text-align: justify;
+    font-weight: 500;
+    letter-spacing: 1px;
+}

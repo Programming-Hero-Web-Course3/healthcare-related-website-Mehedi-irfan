@@ -9,7 +9,7 @@ import Doctor from '../Doctor/Doctor';
 const About = () => {
     const [doctors, setDoctor] = useState([])
     useEffect( () => {
-        fetch('https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/FullService.json?token=AUVRIAFEYVSOZNDIM57ZK6DBN2MCS')
+        fetch('Doctor.json')
         .then(res => res.json())
         .then(data => setDoctor(data))
     },[])
@@ -54,8 +54,8 @@ const About = () => {
            </div>
 
            <div className='shadow-lg rounded-3 py-5 my-5 container mx-auto'>
-                <h2 className='text-center doctorSection-title'>Our <span>Critical Eye Care Hospital</span> Doctors</h2>
-                <div className="row  py-5">
+                <h2 className='text-center doctorSection-title py-5'>Our <span>Critical Eye Care Hospital</span> Doctors</h2>
+                <div className="mx-auto row g-4 py-5">
                     {
                         doctors.map(doctor => <Doctor
                         key={doctor.id}

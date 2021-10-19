@@ -8,7 +8,7 @@ import './Services.css';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect( () => {
-        fetch('https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/FullService.json?token=AUVRIAAZSKZWKPBGUAPDWTTBN2NEY')
+        fetch('FullService.json')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
@@ -18,7 +18,7 @@ const Services = () => {
             <Banner></Banner>
             <div className='py-5 container mx-auto text-center my-5'>
                 <h2 className='serviceContainer-title'>Our <span>Critical Eye Care Hospital</span> Services</h2>
-                <div className="row gy-4">
+                <div className="row gy-4 py-5">
                     {
                         services.map(service => <Service
                         key={service.id}

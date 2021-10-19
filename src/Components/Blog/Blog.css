@@ -1,0 +1,8 @@
+.blog-title{
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.blog-title span{
+    color: #249ed9;
+    font-weight: 700;
+}

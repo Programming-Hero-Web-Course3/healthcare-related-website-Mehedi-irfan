@@ -11,10 +11,13 @@ const ServiceDetails = () => {
     const [servicsDetails, setServicsDetails] = useState({});
     const{img, name} = servicsDetails;
     useEffect(() => {
-        const url = `https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAF2ZW2YNN2MWELV6JLBNZY5S#0${servicId}`;
+        const url = `https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAHW7OE36YQGRSO3ZO3BN26J4#`;
         fetch(url)
         .then(res => res.json())
-        .then(data => setServicsDetails(data[0]))
+        .then(data => {
+            const signleData = data.find((item) => item.id == servicId)
+            setServicsDetails(signleData)
+        })
     },[])
 
     return (
