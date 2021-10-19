@@ -22,7 +22,7 @@ const FullServices = [
         id : 2,
         name : 'Glaucoma & Cornea',
         desc : 'Cataract surgery is the removal of the natural lens of the eye that has developed an opacification, which is referred toas a cataract.',
-        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main1.jpg',
+        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main2.jpg',
         doctor : {
             img :'https://templates.hibootstrap.com/opnix/default/assets/images/doctors/main2.png',
             name : 'Dr. Arnica Sarah',
@@ -40,7 +40,7 @@ const FullServices = [
         id : 3,
         name : 'Dry Eye Surgery',
         desc : 'Pediatric ophthalmology is a sub-speciality of ophthalmology concerned with eye diseases, visual development, and vision care in children.',
-        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main1.jpg',
+        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main3.jpg',
         doctor : {
             img :'https://templates.hibootstrap.com/opnix/default/assets/images/doctors/main3.png',
             name : 'Dr. Jolian Acenj',
@@ -58,7 +58,7 @@ const FullServices = [
         id : 4,
         name : 'Cornea Transplant',
         desc : 'The cornea is a clear layer that covers the front of the eye. It helps the eye focus, and keeps out germs and dust. This is a diseases of the cornea.',
-        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main1.jpg',
+        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main4.jpg',
         doctor : {
             img :'https://templates.hibootstrap.com/opnix/default/assets/images/doctors/main4.png',
             name : 'Dr. Triben Dina',
@@ -76,7 +76,7 @@ const FullServices = [
         id : 5,
         name : 'Surgical Procedure',
         desc : 'Glaucoma is a group of eye diseases which result in damage to the optic nerve and vision loss. The most common type is open-angle glaucoma with less common types.',
-        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main1.jpg',
+        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main5.jpg',
         doctor : {
             img :'https://templates.hibootstrap.com/opnix/default/assets/images/doctors/main5.png',
             name : 'Dr. Alena Malic',
@@ -94,7 +94,7 @@ const FullServices = [
         id : 6,
         name : 'Laser Surgery',
         desc : 'Diabetic retinopathy, also known as diabetic eye disease, is when damage occurs to the retina due to diabetes. It can eventually lead to blindness.',
-        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main1.jpg',
+        img : 'https://templates.hibootstrap.com/opnix/default/assets/images/services/main6.jpg',
         doctor : {
             img :'https://templates.hibootstrap.com/opnix/default/assets/images/doctors/main6.png',
             name : 'Dr. Malina Angel',
