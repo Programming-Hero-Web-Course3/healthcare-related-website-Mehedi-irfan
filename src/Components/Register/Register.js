@@ -7,15 +7,21 @@ import {useState} from 'react'
 import useFirebase from '../Hooks/UseFirebase';
 
 const Register = () => {
-    const {setEmail,error,password, setError, setPassword, signInUsingEmailAndPassword} = useFirebase()
+    const {setEmail,error,password, setError, setPassword, signInUsingEmailAndPassword, singUpUsingEmailAndPassword, isLogin} = useFirebase()
     const {signInUsingGoogle} = useAuth();
+
     const handleSignUp = e => {
         e.preventDefault();
         if(password.length < 6){
             setError('Password Must be 6 letter')
             return;
         }
-        signInUsingEmailAndPassword();
+        if(isLogin){
+            singUpUsingEmailAndPassword();
+        }
+        else{
+            signInUsingEmailAndPassword();
+        }
     }
     const handleEmailChange = e => {
         setEmail(e.target.value)
@@ -47,7 +53,9 @@ const Register = () => {
             </div>
             <Footer></Footer>
         </div>
+        
     );
+    
 };
 
 export default Register;

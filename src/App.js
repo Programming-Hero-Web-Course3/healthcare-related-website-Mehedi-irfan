@@ -7,6 +7,7 @@ import Blog from './Components/Blog/Blog';
 import SignIn from './Components/SignIn/SignIn';
 import Register from './Components/Register/Register';
 import AuthProvider from './Context/AuthProvider';
+import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path='/service'>
           <Services></Services>
+        </Route>
+        <Route path='/serviceDetails/:servicId'>
+          <ServiceDetails></ServiceDetails>
         </Route>
         <Route path='/blog'>
           <Blog></Blog>

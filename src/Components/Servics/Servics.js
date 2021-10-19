@@ -5,7 +5,7 @@ import './Servics.css';
 const Servics = () => {
     const [servics, setServices] = useState([]);
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAEWKA4AKCNIJVZF6ITBNW2DY')
+        fetch('https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAFIJIDHVF6OXDNTAFDBN2ARM')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
@@ -16,6 +16,7 @@ const Servics = () => {
             <h1 className='service-title'>Critical Eye Care Services</h1>
             <div className="row gy-4 ">
                 {
+                    servics && servics.length > 0 &&
                     servics.map(servic => <Servic
                     key={servic.id}
                     servic={servic}
