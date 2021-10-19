@@ -20,19 +20,19 @@ const About = () => {
             <Header></Header>
             <Banner></Banner>
            <div className='container mx-auto py-5 shadow-lg rounded-3 my-5 px-5'>
-               <h5 className='text-center py-3 fs-4'>The leading provider of quality vision care and personalized optometric services in London. <br />Our focus is on providing the very best patient care possible.</h5>
+               <h5 className='text-center py-3 fs-4 about-title'>The leading provider of quality vision care and personalized optometric services in London. <br />Our focus is on providing the very best patient care possible.</h5>
               <div className='text-center py-2'>
-              <img src={aboutImg} className=' rounded-3' alt="" />
+              <img src={aboutImg} className='about-img rounded-3' alt="" />
               </div>
               <br />
                <div className='text-center'>
-               <button className='btn-appointment'>SEE CLINIC SHOWCASE</button>
+               <button className='btn-seeClinic'>SEE CLINIC SHOWCASE</button>
                </div>
                <hr />
                 <div className='text-center py-2 about-title'>
                     <h1>OUR MISSION AND VISION</h1>
                     <span>The mission of Dr. Brock and his highly-trained, experienced staff is to provide the highest quality of care using the safest, most advanced and minimally invasive techniques.</span>
-                    <div className="row py-5">
+                    <div className="row gy-3 py-5">
                         <div className="col-lg-4 col-sm-12">
                             <div className='about-card'>
                                 <h4>EXCELLENT TREATMENTS</h4>

@@ -37,3 +37,8 @@
     background-color: #249ed9;
     color: white;
 }
+@media only screen and (max-width:668px) {
+    .doctor-container{
+        width: 90%;
+    }
+}

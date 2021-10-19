@@ -35,7 +35,7 @@ const Register = () => {
     return (
         <div>
             <Header></Header>
-            <div className='my-5 text-center w-50 mx-auto signIn-container'>
+            <div className='my-5 text-center mx-auto signIn-container'>
             <h1 className="signIn-text pb-5">Create Account</h1>
             <form  onSubmit={handleSignUp}>
                 <input className='form-control input-item' type="name" name="" placeholder='Enter Your Name' id="" required />

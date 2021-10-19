@@ -27,7 +27,7 @@ const SignIn = () => {
     return (
         <div>
             <Header></Header>
-            <div className='my-5 text-center w-50 mx-auto signIn-container'>
+            <div className='my-5 text-center  mx-auto signIn-container'>
             <h1 className="signIn-text pb-5">Please Sign In</h1>
             <form  onSubmit={handleSignIn}>
                 <input className='form-control input-item' type="email" name="" placeholder='Enter Your Email' id="" />

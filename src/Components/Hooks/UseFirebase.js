@@ -52,7 +52,7 @@ const useFirebase = () => {
     const logOut = () => {
         signOut(auth)
         .then(() => {
-
+            setUser('')
         })
     }
     // data state chage\

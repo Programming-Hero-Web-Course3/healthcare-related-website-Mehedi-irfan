@@ -12,7 +12,6 @@
 }
 @media only screen and (max-width:668px) {
     .service-container{
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+        clip-path: none;
     }
 }

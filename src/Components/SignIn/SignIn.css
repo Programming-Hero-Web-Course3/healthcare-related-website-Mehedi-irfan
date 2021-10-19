@@ -6,6 +6,7 @@
     border: 2px solid #249ed9;
     border-radius: 10px;
     padding: 80px 80px;
+    width: 50%;
 }
 .input-item{
     background-color: transparent;
@@ -28,4 +29,10 @@
 .btn-submit:hover{
     background-color: #249ed9;
     color: white;
+}
+@media only screen and (max-width:668px) {
+    .signIn-container{
+        width: 100%;
+        padding: 20px 10px;
+    }
 }

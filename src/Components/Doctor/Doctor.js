@@ -5,8 +5,7 @@ const Doctor = (props) => {
     const {name, img, specailist} = props.doctor;
     console.log(props.doctor)
     return (
-    
-            <div className="col-lg-4 col-sm-12 doctor-container">
+            <div className="col-lg-4 col-12 doctor-container">
                 <img src={img} className='doctor-img' alt="" />
                 <div className='pt-3 pb-2 doctor-info'>
                 <h4>{name}</h4>
@@ -20,7 +19,6 @@ const Doctor = (props) => {
                     <span><i class="fab fa-instagram doctor-icon"></i></span>
                 </div>
             </div>
-        
     );
 };
 

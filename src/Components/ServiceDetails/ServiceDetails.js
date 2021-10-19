@@ -11,7 +11,7 @@ const ServiceDetails = () => {
     const [servicsDetails, setServicsDetails] = useState({});
     const{img, name} = servicsDetails;
     useEffect(() => {
-        const url = `https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAHW7OE36YQGRSO3ZO3BN26J4#`;
+        const url = `https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAFUBCRF3SOZKQTBQPLBN3RI4#`;
         fetch(url)
         .then(res => res.json())
         .then(data => {

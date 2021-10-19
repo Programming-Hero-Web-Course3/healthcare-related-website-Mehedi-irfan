@@ -13,7 +13,7 @@ const SingleBlog = (props) => {
                    <h4>{title}</h4>
                    <h6>{date}</h6>
                    <p>{desc}</p>
-                    <button className='btn-appointment'>See More <i class="fas fa-arrow-alt-circle-right"></i></button>
+                    <button className='btn-seeMore'>See More <i class="fas fa-arrow-alt-circle-right"></i></button>
                </div>
            </div>
         </div>
