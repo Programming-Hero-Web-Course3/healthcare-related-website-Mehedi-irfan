@@ -37,22 +37,22 @@ const useFirebase = () => {
         })
     }
     // signIn\
-    const singUpUsingEmailAndPassword = () => {
-        signInWithEmailAndPassword(auth, email, password)
-        .then(result=> {
-            const user = result.user;
-            setUser(user);
-            setError('')
-        })
-        .catch(error => {
-            setError(error.message)
-        })
-    }
+    // const singUpUsingEmailAndPassword = () => {
+    //     signInWithEmailAndPassword(auth, email, password)
+    //     .then(result=> {
+    //         const user = result.user;
+    //         setUser(user);
+    //         setError('')
+    //     })
+    //     .catch(error => {
+    //         setError(error.message)
+    //     })
+    // }
     // log out\
     const logOut = () => {
         signOut(auth)
         .then(() => {
-            setUser('')
+           
         })
     }
     // data state chage\
@@ -73,9 +73,10 @@ const useFirebase = () => {
         setPassword,
         password,
         setError,
-        singUpUsingEmailAndPassword,
         isLogin,
-        setIsLogin
+        setIsLogin,
+        email,
+        password
     }
 }
 

@@ -45,7 +45,7 @@ const Header = () => {
                         
                     </li>
                     {/* user display name\ */}
-                    <li className='nav-item'><h5 className='mt-3 navItem'>{user.displayName}</h5></li>
+                    <li className='nav-item'><h5 className='mt-3 navItem'>{user?.displayName}</h5></li>
                 </ul>
               </div>
             </div>

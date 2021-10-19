@@ -5,22 +5,35 @@ import Header from '../Header/Header';
 import useAuth from '../Hooks/UseAuth';
 import useFirebase from '../Hooks/UseFirebase';
 import './SignIn.css';
+import { getAuth, signInWithEmailAndPassword } from '@firebase/auth';
 import { useHistory, useLocation } from 'react-router';
 
 const SignIn = () => {
+    
     const {user, signInUsingGoogle } = useAuth();
-    const {singUpUsingEmailAndPassword} = useFirebase();
+    const { setUser, email, password, setError} = useFirebase();
     const location = useLocation();
     const history = useHistory();
     const redirect_url = location.state?.from || '/home';
     // sign in btn\
-    const handleSignIn = () => {
-        singUpUsingEmailAndPassword()
+    const auth = getAuth()
+    const handleSignIn = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+            .then(res => {
+                setUser(res.user);
+                history.push(redirect_url);
+            })
+            .catch(error => {
+                setError(error.message);
+            })
     }
     // google sign in btn\
     const handleGoogleLogIn =() =>{
         signInUsingGoogle()
         .then(result => {
+            const user= result.user;
+            setUser(user)
             history.push(redirect_url);
         })
     }
