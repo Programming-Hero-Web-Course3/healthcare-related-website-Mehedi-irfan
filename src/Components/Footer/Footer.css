@@ -16,3 +16,8 @@
 .copyright-text{
     letter-spacing: 2px;
 }
+@media only screen and (max-width:668px) {
+    .footer-container{
+        width: 100%;
+    }
+}

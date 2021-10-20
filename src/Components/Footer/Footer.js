@@ -4,8 +4,8 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className='footer-container py-5'>
-            <div className="row container mx-auto">
-                <div className="col-lg-3 ">
+            <div className="row md:container mx-auto">
+                <div className="col-lg-3 col-6">
                     <h3 className='footer-contact'>Contact</h3>
                     <nav>
                         <ul className='list-unstyled text-white '>
@@ -15,7 +15,7 @@ const Footer = () => {
                         </ul>
                     </nav>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-6">
                     <div className='ms-5'>
                     <h3 className='footer-contact'>About</h3>
                     <nav>
@@ -29,8 +29,8 @@ const Footer = () => {
                     </nav>
                     </div>
                 </div>
-                <div className="col-lg-3">
-                    <div className='ms-5'>
+                <div className="col-lg-3 col-6">
+                    <div className=''>
                     <h3 className='footer-contact'>Explore</h3>
                     <nav>
                         <ul className='list-unstyled text-white'>
@@ -43,7 +43,7 @@ const Footer = () => {
                     </nav>
                     </div>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-6">
                     <div className='ms-5'>
                     <h3 className='footer-contact'>Support</h3>
                     <nav>
