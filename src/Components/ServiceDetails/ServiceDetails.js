@@ -8,15 +8,15 @@ import './ServiceDetails.css';
 
 const ServiceDetails = () => {
     const {servicId} = useParams();
-    const [servicsDetails, setServicsDetails] = useState({});
+    const [servicsDetails, setServicsDetails] = useState([]);
     const{img, name} = servicsDetails;
     useEffect(() => {
-        const url = `https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAFUBCRF3SOZKQTBQPLBN3RI4#`;
+        const url = `https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAGQLODDIGAM3NL5ZOLBOBF2Y`;
         fetch(url)
         .then(res => res.json())
         .then(data => {
             // find single id on fake data\
-            const signleData = data.find((item) => item.id == servicId)
+            const signleData = data.find((item) => item?.id == servicId)
             setServicsDetails(signleData)
         })
     },[])

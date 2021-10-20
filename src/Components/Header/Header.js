@@ -1,19 +1,37 @@
+import { getAuth } from '@firebase/auth';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import logo from '../../logo.png';
 import Banner from '../Banner/Banner';
 import useAuth from '../Hooks/UseAuth';
 import useFirebase from '../Hooks/UseFirebase';
 import './Header.css'
+import { signOut } from '@firebase/auth';
 
 const Header = () => {
 
-    const {user, logOut} = useFirebase();
-    // navlink active style\
-    const activeStyle = {
-        color : '#7d4c9e',
-        borderBottom : '2px solid #7d4c9e'
+    const { firebases } = useAuth();
+    const [user, setUser] = firebases;
+
+    const auth = getAuth();
+
+    const logOut = () => {
+        signOut(auth).then(() => {
+            setUser({});
+        })
     }
+
+    const history = useHistory();
+
+    const toSignup = () => {
+        history.push('/signup');
+    }
+
+    const toSignin = () => {
+        history.push('/signin');
+    }
+
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-color ">
@@ -28,20 +46,22 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <NavLink activeStyle={activeStyle} className="nav-link fs-5 mx-2 fw-semibold navItem" to="/home">Home</NavLink>
+                    <NavLink className="nav-link fs-5 mx-2 fw-semibold navItem" to="/home">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink activeStyle={activeStyle} className="nav-link fs-5 mx-2 fw-semibold navItem" to="/about">About</NavLink>
+                    <NavLink className="nav-link fs-5 mx-2 fw-semibold navItem" to="/about">About</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink activeStyle={activeStyle} className="nav-link fs-5 mx-2 fw-semibold navItem" to="/service">Service</NavLink>
+                    <NavLink className="nav-link fs-5 mx-2 fw-semibold navItem" to="/service">Service</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink activeStyle={activeStyle} className="nav-link fs-5 mx-2 fw-semibold navItem" to="/blog">Blog</NavLink>
+                    <NavLink  className="nav-link fs-5 mx-2 fw-semibold navItem" to="/blog">Blog</NavLink>
                     </li>
                     <li className="nav-item">
-                    {user.email ?<NavLink onClick={logOut} className="nav-link fs-5 mx-2 fw-semibold" id='navItem' to='/signIn'>Sign Out</NavLink>
-                        :<NavLink className="nav-link fs-5 mx-2 fw-semibold" id='navItem' to="/signIn">Sign In</NavLink>}
+                    {
+                    user?.email ?<NavLink onClick={logOut} className="nav-link fs-5 mx-2 fw-semibold" id='navItem' to='/signIn'>Sign Out</NavLink>
+                        :<NavLink onClick={toSignin}  className="nav-link fs-5 mx-2 fw-semibold" id='navItem' to="/signIn">Sign In</NavLink>
+                        }
                         
                     </li>
                     {/* user display name\ */}
