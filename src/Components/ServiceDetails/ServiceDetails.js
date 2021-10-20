@@ -5,29 +5,29 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import {useState, useEffect} from 'react';
 import './ServiceDetails.css';
+import { serviceData } from '../../asset/serviceData';
 
 const ServiceDetails = () => {
     const {servicId} = useParams();
-    const [servicsDetails, setServicsDetails] = useState([]);
+    const [servicsDetails, setServicsDetails] = useState({});
     const{img, name} = servicsDetails;
+    console.log(servicsDetails);
     useEffect(() => {
-        const url = `https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-Mehedi-irfan/main/public/services.json?token=AUVRIAGQLODDIGAM3NL5ZOLBOBF2Y`;
-        fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            // find single id on fake data\
-            const signleData = data.find((item) => item?.id == servicId)
+        const getServiceData = serviceData;
+        // find single data\
+        const signleData = getServiceData.find((item) => item.id == servicId)
             setServicsDetails(signleData)
-        })
-    },[])
-
+    },[servicId])
     return (
         <div>
             <Header></Header>
             <Banner></Banner>
             <div className='container mx-auto d-flex justify-content-center align-items-center serviceDetails-container'>
                 <div className='w-100'>
-                <img src={img} className='serviceDetails-img' alt="" />
+                    {
+                        servicsDetails &&  <img src={img} className='serviceDetails-img' alt="" />
+                    }
+               
                 </div>
                <div className='w-100 detailsContainer-info'>
                <h1>{name}</h1>
