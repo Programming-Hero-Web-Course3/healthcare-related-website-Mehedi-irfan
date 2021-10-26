@@ -66,6 +66,11 @@ const Header = () => {
                     </li>
                     {/* user display name\ */}
                     <li className='nav-item'><h5 className='mt-3 navItem'>{user?.displayName}</h5></li>
+                    {
+                    user.email && <li className='nav-item'>
+                        <img src={user?.photoURL} className='w-50 rounded-circle profile-img mt-2 ms-2' alt="" />
+                    </li>
+                    }
                 </ul>
               </div>
             </div>
